@@ -46,6 +46,7 @@ public class ResponseParserJSONimpl implements ResponseParser {
 		}
 
 		return friendlyString;
+
 	}
 
 }

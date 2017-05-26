@@ -20,8 +20,8 @@ public class RemoteServiceInvoker {
 	//Returns friendly format String (JSON)
 	public String sendJSONrequest(String parametersString) throws MalformedURLException{
 		
-		//URL fullURL = new URL(URL_BASE+JSON+parametersString+APP_KEY);
-		URL fullURL = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY"+APP_KEY);
+		URL fullURL = new URL(URL_BASE+JSON+parametersString+APP_KEY);
+		//URL fullURL = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY"+APP_KEY);
 		rp=new ResponseParserJSONimpl();
 		String friendlyResponse = "";
 		String data = "";

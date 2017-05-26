@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class ParamsStringBuilder {
 
-	private List<String> origins;
+	private String origin;
 	private String destination;
 	private Map<String,String> additionalParameters;
 	
@@ -20,19 +20,26 @@ public class ParamsStringBuilder {
 	}
 	
 	//Builder: origins + destination + map pars<K,V>
-	public ParamsStringBuilder(List<String> origins, String destination,
+	public ParamsStringBuilder(String origin, String destination,
 			Map<String, String> additionalParameters) {
 		super();
-		this.origins = origins;
+		this.origin = origin;
 		this.destination = destination;
 		this.additionalParameters = additionalParameters;
 	}
 	
 	public String buildParameterString(){
 		String paramStr ="";
+		paramStr += "?units=imperial&origins=";
+		origin = origin.replace(" ", "+");
+		paramStr += origin+"&destinations=";
+		destination=destination.replace(" ", "+");
+		paramStr += destination;
+		
+		//TODO:additional params:
 		
 		
-		return("work in progress!!");
+		return(paramStr);
 		
 		
 	}

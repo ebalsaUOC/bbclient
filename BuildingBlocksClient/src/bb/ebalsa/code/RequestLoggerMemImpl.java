@@ -23,6 +23,7 @@ public class RequestLoggerMemImpl implements RequestLogger {
 
 	@Override
 	public List<String> listRequests() {
+
 		return this.requests;
 	}
 
